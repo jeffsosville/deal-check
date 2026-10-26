@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nine "Deals," Traced to Source</title>
+<meta name="description" content="A source check of nine business-for-sale listings shared on X on Oct 25, 2026: brokers of record, days on market, view counts, and where the numbers don't match.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The 1.11x lawn deal is a 3.4x deal. Nine viral listings, traced to source.">
+<meta property="og:description" content="The viral thread's $628K 'cash flow' is gross profit. The real listing asks $449K on $133K of earnings. Brokers, days on market, and every mismatch for all nine deals.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The 1.11x lawn deal is a 3.4x deal.">
+<meta name="twitter:description" content="The viral thread's $628K 'cash flow' is gross profit. The real listing asks $449K on $133K of earnings. All nine deals, traced to source.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f5f0; --paper:#ffffff; --ink:#1b1a17; --muted:#6b675e; --line:#e4dfd4;
+  --accent:#7a1f1f; --accent-soft:#f6e9e6; --ok:#2f6b3b; --ok-soft:#e7f1e8;
+  --warn:#8a5a00; --warn-soft:#fbf1dc; --chip:#efebe2;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141311; --paper:#1d1c19; --ink:#efece6; --muted:#a19c91; --line:#34312b;
+    --accent:#e08a7c; --accent-soft:#3a2420; --ok:#8cc79a; --ok-soft:#1f3124;
+    --warn:#e6b45c; --warn-soft:#3a2f1a; --chip:#2a2824;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141311; --paper:#1d1c19; --ink:#efece6; --muted:#a19c91; --line:#34312b;
+  --accent:#e08a7c; --accent-soft:#3a2420; --ok:#8cc79a; --ok-soft:#1f3124;
+  --warn:#e6b45c; --warn-soft:#3a2f1a; --chip:#2a2824;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif}
+a{color:var(--accent);text-underline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header{padding:56px 0 28px;border-bottom:1px solid var(--line)}
+.kicker{font:600 12px/1 Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h1{font:700 clamp(32px,6vw,54px)/1.05 Fraunces,Georgia,serif;margin:14px 0 16px;letter-spacing:-.01em}
+.dek{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:720px;margin:0}
+.byline{margin-top:18px;font-size:14px;color:var(--muted)}
+h2{font:700 26px/1.2 Fraunces,Georgia,serif;margin:0 0 14px}
+section{padding:40px 0;border-bottom:1px solid var(--line)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px}
+.stat b{display:block;font:700 30px/1.1 Fraunces,Georgia,serif}
+.stat span{font-size:13px;color:var(--muted)}
+.lead{margin-top:28px;background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:14px;padding:20px}
+.lead h2{font-size:24px;margin-bottom:6px}
+.lead p{margin:0 0 14px;color:var(--muted)}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.vs div{border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.vs .lbl{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.vs .big{font:700 22px/1.25 Fraunces,Georgia,serif;margin-top:4px}
+.vs .real{background:var(--ok-soft)}
+.vs .claim{background:var(--accent-soft)}
+.lead .cta{display:inline-block;margin-top:14px;font-weight:600}
+@media (max-width:560px){.vs{grid-template-columns:1fr}}
+.find{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.find li{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px}
+.find li strong{display:block;margin-bottom:2px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:14px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--chip)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12.5px}
+.pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.p-red{background:var(--accent-soft);color:var(--accent)}
+.p-amb{background:var(--warn-soft);color:var(--warn)}
+.p-grn{background:var(--ok-soft);color:var(--ok)}
+.cards{display:grid;gap:18px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.card-h{padding:18px 20px 14px;border-bottom:1px solid var(--line);display:flex;gap:12px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}
+.card-h h3{font:700 21px/1.25 Fraunces,Georgia,serif;margin:4px 0 0}
+.card-h .n{font:600 12px/1 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.card-b{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.col{padding:16px 20px}
+.col+.col{border-left:1px solid var(--line)}
+.col h4{margin:0 0 10px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:0;font-size:14px}
+dt{color:var(--muted)}
+dd{margin:0;font-variant-numeric:tabular-nums}
+.diff{color:var(--accent);font-weight:600}
+.issues{padding:14px 20px 18px;border-top:1px solid var(--line);background:var(--bg)}
+.issues h4{margin:0 0 8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.issues ul{margin:0;padding-left:18px;font-size:14.5px}
+.issues li{margin:4px 0}
+.links{padding:12px 20px;border-top:1px solid var(--line);font-size:13.5px;display:flex;gap:16px;flex-wrap:wrap}
+.note{background:var(--warn-soft);border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:15px}
+.note strong{color:var(--warn)}
+.method p,.method li{color:var(--ink);font-size:15px}
+.method ul{padding-left:18px}
+footer{padding:32px 0 56px;font-size:13px;color:var(--muted)}
+.toggle{position:fixed;top:12px;right:12px;background:var(--paper);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 12px;font:500 13px Inter;cursor:pointer}
+@media (max-width:760px){
+  .stats{grid-template-columns:1fr 1fr}
+  .card-b{grid-template-columns:1fr}
+  .col+.col{border-left:0;border-top:1px solid var(--line)}
+  header{padding-top:48px}
+}
+</style>
+</head>
+<body>
+<button class="toggle" id="themeToggle" aria-label="Toggle color theme">Theme</button>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">Listing source check · October 26, 2026</div>
+    <h1>Nine "deals," traced back to the broker</h1>
+    <p class="dek">On October 25, an X thread shared nine businesses for sale with headline multiples as low as 1.04x. We looked each one up on BizBuySell, BizQuest, broker sites, and the DealLedger index to find who is actually selling it, how long it has been on the market, and whether the numbers match.</p>
+    <div class="byline">Compiled by DealLedger · Source thread: <a href="https://x.com/BobbyBizScout" rel="nofollow">@BobbyBizScout</a>, Oct 25, 2026 · All figures seller-reported unless noted</div>
+
+    <div class="stats">
+      <div class="stat"><b>9 of 9</b><span>traced to a real broker or MLS listing</span></div>
+      <div class="stat"><b>~209 days</b><span>median time on market (8 traced listings)</span></div>
+      <div class="stat"><b>4</b><span>cards labeled "listed a week ago"; oldest is ~16 months</span></div>
+      <div class="stat"><b>6</b><span>listings where price, revenue, or terms differ from the source, including the thread's lead deal</span></div>
+    </div>
+
+    <div class="lead">
+      <h2>The "1.11x" lawn deal is a 3.4x deal</h2>
+      <p>Deal No. 1 is Business Brokers of Florida MLS listing BBF-774-00002. Here's the thread next to the listing.</p>
+      <div class="vs">
+        <div class="claim"><div class="lbl">Thread</div><div class="big">$695K ask · $628K cash flow · 1.11x · 69% margin</div></div>
+        <div class="real"><div class="lbl">Actual listing</div><div class="big">$449K ask · $133K earnings · 3.4x · 25% margin</div></div>
+      </div>
+      <p style="margin-top:14px">The $628K is 2025 revenue ($908,010) minus 2026 cost of goods ($280,218): gross profit from two different years, with $600K+ of operating expenses left out. On its 2025 tax return, the business earned $126,948.</p>
+      <a class="cta" href="https://www.bizmls.com/cgi-bin/a-bus-d.asp?LIST_NUMBER=BBF-774-00002&amp;PageIndex=1&amp;folder=BIZMLS&amp;returnpos=1">See the real listing on BizMLS →</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2>What we found</h2>
+  <ul class="find">
+    <li><strong>The lead deal's "cash flow" is gross profit, not cash flow.</strong>The thread's No. 1, a Duval County lawn business at "1.11x," is BBF MLS listing BBF-774-00002. The thread's $628K matches 2025 revenue ($908,010) minus 2026 cost of goods ($280,218), which ignores more than $600K of 2025 operating expenses. The listing's actual discretionary earnings were $126,948 in 2025 and $133,011 on its current P&amp;L. It asks $449,000, a 3.4x multiple.</li>
+    <li><strong>These are real, broker-represented listings, but the broker isn't shown.</strong>All nine trace to a broker listing, eight on BizBuySell and BizQuest and one on the Florida BBF MLS. The cards in the thread route inquiries through the poster's platform instead.</li>
+    <li><strong>"Listed a week ago" isn't accurate for most of them.</strong>The glass glazing listing dates to about June 2025, the medical practice to about late June 2026, and the print shop to about early September. Only the legal-services listing is under a month old.</li>
+    <li><strong>Several numbers don't match the source listing.</strong>The daycare's asking price, the network company's asking price, and the bakery's and print shop's revenue all differ from what the listing shows today.</li>
+    <li><strong>Some headline figures are hard to reconcile.</strong>A collision shop with $1.4M revenue, $240K annual rent, and 12 employees is shown producing $809K of cash flow. The lawn business's 69% "margin" is a gross margin. Its 2025 tax return shows a 14% earnings margin.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>At a glance</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th><th>Business</th><th>Broker of record</th><th class="num">Ask (thread)</th><th class="num">Ask (source)</th><th class="num">Days on market</th><th class="num">BizQuest views</th><th class="num">Thread "viewed"</th><th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Lawn care &amp; landscaping, Duval Co., FL</td><td>BBF MLS member (BBF-774-00002)</td><td class="num">$695,000</td><td class="num diff">$449,000</td><td class="num">—</td><td class="num">—</td><td class="num">9</td><td><span class="pill p-red">Gross profit shown as cash flow</span></td></tr>
+        <tr><td>2</td><td>Collision repair, Queens, NY</td><td>Transworld Business Advisors</td><td class="num">$999,999</td><td class="num">$999,999</td><td class="num">~203</td><td class="num">1,662</td><td class="num">73</td><td><span class="pill p-red">Numbers don't reconcile</span></td></tr>
+        <tr><td>3</td><td>Legal process service, nationwide</td><td>Not identified</td><td class="num">$750,000</td><td class="num">$750,000</td><td class="num">~28 (est.)</td><td class="num">269</td><td class="num">2</td><td><span class="pill p-grn">Matches</span></td></tr>
+        <tr><td>4</td><td>Concierge medicine, Palm Beach Gardens, FL</td><td>Myriam Cohen (BBF 1287-00176)</td><td class="num">$395,000</td><td class="num">$395,000</td><td class="num">~120 (est.)</td><td class="num">406</td><td class="num">6</td><td><span class="pill p-amb">"Week ago" label wrong</span></td></tr>
+        <tr><td>5</td><td>Glass &amp; glazing, Sacramento, CA</td><td>The Business Team (ref SA11701)</td><td class="num">$300,000</td><td class="num">$300,000</td><td class="num">~493</td><td class="num">1,303</td><td class="num">—</td><td><span class="pill p-red">16 months, "week ago"</span></td></tr>
+        <tr><td>6</td><td>Child day care, Houston, TX</td><td>Not identified ("Admin")</td><td class="num">$325,000</td><td class="num diff">$250,000</td><td class="num">~214</td><td class="num">948</td><td class="num">42</td><td><span class="pill p-red">Price mismatch</span></td></tr>
+        <tr><td>7</td><td>Network &amp; phone systems, East TX</td><td>Ben Norris, Transworld East Texas</td><td class="num">$445,000</td><td class="num diff">$495,000*</td><td class="num">~481</td><td class="num">1,288</td><td class="num">165</td><td><span class="pill p-amb">Price varies by site</span></td></tr>
+        <tr><td>8</td><td>Commercial print shop, Polk Co., FL</td><td>Michael Shea, Transworld</td><td class="num">$450,000</td><td class="num">$450,000</td><td class="num">~48 (est.)</td><td class="num">199</td><td class="num">3</td><td><span class="pill p-amb">Revenue varies</span></td></tr>
+        <tr><td>9</td><td>Full-service bakery, Rhode Island</td><td>Transworld Business Advisors</td><td class="num">$550,000</td><td class="num">$550,000</td><td class="num">~780</td><td class="num">3,798</td><td class="num">44</td><td><span class="pill p-red">Revenue mismatch</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:13px;color:var(--muted);margin-top:10px">*BizQuest shows $495,000; Transworld's own page shows $445,000. Days on market as of Oct 26, 2026. "Thread viewed" is the "buyers viewed this" count printed on each card in the thread. BizQuest views checked Oct 26, 2026.</p>
+</section>
+
+<section>
+  <h2>Listing by listing</h2>
+  <div class="cards">
+
+    <!-- 1 -->
+    <article class="card">
+      <div class="card-h"><div><div class="n">No. 1 · Duval County, FL</div><h3>Lawn Care &amp; Landscaping Business</h3></div><span class="pill p-red">Gross profit shown as cash flow</span></div>
+      <div class="card-b">
+        <div class="col"><h4>Thread says</h4><dl>
+          <dt>Asking</dt><dd>$695,000</dd><dt>Cash flow</dt><dd>$628,000</dd><dt>Revenue</dt><dd>$908,000</dd><dt>Multiple</dt><dd>1.11x</dd><dt>Margin</dt><dd>69.2%</dd><dt>Listing no.</dt><dd class="mono">BBF-774-00002</dd><dt>Label</dt><dd>"Listed a week ago"</dd></dl></div>
+        <div class="col"><h4>Source listing (BizMLS / BBF)</h4><dl>
+          <dt>Broker</dt><dd>BBF MLS member; agent shown to members only</dd><dt>Listing no.</dt><dd class="mono">BBF-774-00002</dd><dt>Asking</dt><dd class="diff">$449,000</dd><dt>Disc. earnings</dt><dd class="diff">$133,011 (current P&amp;L)</dd><dt>Sales</dt><dd>$522,330 (current P&amp;L)</dd><dt>Multiple</dt><dd class="diff">3.38x</dd><dt>FF&amp;E</dt><dd>$83,000 (included)</dd><dt>Financing</dt><dd>$134,700 assumable loan, 6.5%, 48 mo.; $314,300 down</dd><dt>Staff</dt><dd>0 FT, 0 PT, 1 manager; owner works 40 hrs/wk</dd></dl></div>
+      </div>
+      <div class="tablewrap" style="border-radius:0;border-left:0;border-right:0">
+        <table style="min-width:520px">
+          <thead><tr><th>From the listing</th><th class="num">2024 tax return</th><th class="num">2025 tax return</th><th class="num">2026 P&amp;L</th></tr></thead>
+          <tbody>
+            <tr><td>Gross revenue</td><td class="num">$973,718</td><td class="num">$908,010</td><td class="num">$522,330</td></tr>
+            <tr><td>Cost of goods</td><td class="num">$234,334</td><td class="num">$274,672</td><td class="num">$280,218</td></tr>
+            <tr><td>Operating expenses</td><td class="num">$598,268</td><td class="num">$608,073</td><td class="num">$113,265</td></tr>
+            <tr><td>Net</td><td class="num">$141,116</td><td class="num">$25,265</td><td class="num">$128,847</td></tr>
+            <tr><td><strong>Discretionary earnings</strong></td><td class="num"><strong>$219,229</strong></td><td class="num"><strong>$126,948</strong></td><td class="num"><strong>$133,011</strong></td></tr>
+            <tr><td>Earnings margin</td><td class="num">22.5%</td><td class="num">14.0%</td><td class="num">25.5%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="issues"><h4>Issues</h4><ul>
+        <li><strong>The thread's $628K "cash flow" is a gross-profit number.</strong> It equals 2025 revenue ($908,010) minus 2026 cost of goods ($280,218) = $627,792, and $627,792 ÷ $908,010 is the thread's 69.2% "margin." That figure skips over $600K of 2025 operating expenses.</li>
+        <li>Actual discretionary earnings, per the listing, ranged from $126,948 to $219,229 over three years. That's 19% to 35% of the cash flow the thread claimed.</li>
+        <li>Revenue fell from $973,718 (2024) to $908,010 (2025), and 2025 earnings fell 42%.</li>
+        <li>The listing asks $449,000. The thread showed $695,000.</li>
+        <li>At the listing's own numbers the multiple is 3.4x to 3.5x, not 1.11x. That's in line with BizBuySell's Florida landscaping range of 1.28x to 3.42x.</li>
+        <li>This is the first deal in the thread, and the one the most-shared quote-post was built on.</li>
+      </ul></div>
+      <div class="links"><a href="https://www.bizmls.com/cgi-bin/a-bus-d.asp?LIST_NUMBER=BBF-774-00002&amp;PageIndex=1&amp;folder=BIZMLS&amp;returnpos=1">BizMLS listing BBF-774-00002</a></div>
+    </article>
+
+    <!-- 2 -->
+    <article class="card">
+      <div class="card-h"><div><div class="n">No. 2 · Queens, NY</div><h3>High-Volume Queens Collision Center</h3></div><span class="pill p-red">Numbers don't reconcile</span></div>
+      <div class="card-b">
+        <div class="col"><h4>Thread says</h4><dl>
+          <dt>Asking</dt><dd>$999,999</dd><dt>Cash flow</dt><dd>$809,000</dd><dt>Revenue</dt><dd>$1.4M</dd><dt>Multiple</dt><dd>1.24x</dd><dt>Margin</dt><dd>57.8%</dd></dl></div>
+        <div class="col"><h4>Source listing</h4><dl>
+          <dt>Broker</dt><dd>Transworld Business Advisors</dd><dt>BBS ID</dt><dd class="mono">2491209</dd><dt>Listed</dt><dd>~Apr 6, 2026 (~203 days)</dd><dt>Rent</dt><dd>$20,000 / month</dd><dt>Employees</dt><dd>12</dd><dt>BizQuest views</dt><dd>1,662</dd></dl></div>
+      </div>
+      <div class="issues"><h4>Issues</h4><ul>
+        <li>$1.4M revenue minus $240K rent leaves about $1.16M to cover 12 employees, parts, paint, insurance, and everything else. $809K of cash flow would leave about $350K for all of it.</li>
+        <li>The BizBuySell copy stopped appearing around Sept 8. It's still live on Transworld and BizQuest.</li>
+      </ul></div>
+      <div class="links"><a href="https://www.bizbuysell.com/business-opportunity/high-volume-queens-collision-center-recession-proof-investment/2491209/">BizBuySell</a><a href="https://www.bizquest.com/business-for-sale/high-volume-queens-collision-center-recession-proof-investment/BW2491209/">BizQuest</a></div>
+    </article>
+
+    <!-- 3 -->
+    <article class="card">
+      <div class="card-h"><div><div class="n">No. 3 · Nationwide / home-based</div><h3>Nationwide Legal Process Service &amp; Litigation Support</h3></div><span class="pill p-grn">Matches source</span></div>
+      <div class="card-b">
+        <div class="col"><h4>Thread says</h4><dl>
+          <dt>Asking</dt><dd>$750,000</dd><dt>Cash flow</dt><dd>$469,000</dd><dt>Revenue</dt><dd>$1.0M</dd><dt>Multiple</dt><dd>1.60x</dd><dt>Label</dt><dd>"Fresh on BizScout"</dd></dl></div>
+        <div class="col"><h4>Source listing</h4><dl>
+          <dt>Broker</dt><dd>Not shown ("Contact Seller")</dd><dt>BBS ID</dt><dd class="mono">2560444</dd><dt>Listed</dt><dd>~late Sept 2026 (~28 days, est.)</dd><dt>Revenue</dt><dd>$1,002,222</dd><dt>Employees</dt><dd>2, home-based, 5 years</dd><dt>BizQuest views</dt><dd>269</dd></dl></div>
+      </div>
+      <div class="issues"><h4>Notes</h4><ul>
+        <li>This listing is on BizBuySell and BizQuest, not exclusive to the poster's platform.</li>
+        <li>Cash flow was revised on the source from $446,761 to $468,998.</li>
+      </ul></div>
+      <div class="links"><a href="https://www.bizquest.com/business-for-sale/nationwide-legal-process-service-and-litigation-support-business/BW2560444/">BizQuest</a></div>
+    </article>
+
+    <!-- 4 -->
+    <article class="card">
+      <div class="card-h"><div><div class="n">No. 4 · Palm Beach Gardens, FL</div><h3>Concierge Medicine Practice</h3></div><span class="pill p-amb">"Week ago" label wrong</span></div>
+      <div class="card-b">
+        <div class="col"><h4>Thread says</h4><dl>
+          <dt>Asking</dt><dd>$395,000</dd><dt>Cash flow</dt><dd>$305,000</dd><dt>Revenue</dt><dd>$385,000</dd><dt>Margin</dt><dd>79.2%</dd><dt>Listing no.</dt><dd class="mono">BBF-1287-00176</dd><dt>Label</dt><dd>"Listed a week ago"</dd></dl></div>
+        <div class="col"><h4>Source listing</h4><dl>
+          <dt>Broker</dt><dd>Myriam Cohen (BBF ref 1287-00176)</dd><dt>BBS ID</dt><dd class="mono">2521756</dd><dt>Listed</dt><dd>~late June 2026 (~120 days, est.)</dd><dt>Patients</dt><dd>~125 active</dd><dt>Employees</dt><dd>1 full-time</dd><dt>BizQuest views</dt><dd>406</dd></dl></div>
+      </div>
+      <div class="issues"><h4>Issues</h4><ul>
+        <li>On the market about four months, not one week.</li>
+        <li>With one employee and about 125 patients, the $305K "cash flow" is essentially the physician-owner's compensation. A buyer has to be a licensed physician to keep it.</li>
+      </ul></div>
+      <div class="links"><a href="https://www.bizquest.com/business-for-sale/concierge-medicine-practice-for-sale/BW2521756/">BizQuest</a><a href="https://www.businessbroker.net/business-for-sale/concierge-medicine-practice-palm-beach-gardens-florida/1012836.aspx">BusinessBroker.net</a></div>
+    </article>
+
+    <!-- 5 -->
+    <article class="card">
+      <div class="card-h"><div><div class="n">No. 5 · Sacramento, CA</div><h3>Very Profitable Glass Glazing Business</h3></div><span class="pill p-red">~16 months, labeled "week ago"</span></div>
+      <div class="card-b">
+        <div class="col"><h4>Thread says</h4><dl>
+          <dt>Asking</dt><dd>$300,000</dd><dt>Cash flow</dt><dd>$288,000</dd><dt>Revenue</dt><dd>$456,000</dd><dt>Multiple</dt><dd>1.04x</dd><dt>Label</dt><dd>"Listed a week ago"</dd></dl></div>
+        <div class="col"><h4>Source listing</h4><dl>
+          <dt>Broker</dt><dd>The Business Team (CA lic. 1160661), ref SA11701</dd><dt>BBS ID</dt><dd class="mono">2381517</dd><dt>Listed</dt><dd>~June 20, 2025 (~493 days)</dd><dt>Prior asks</dt><dd>$560,000 and $500,000</dd><dt>BizQuest views</dt><dd>1,303</dd></dl></div>
+      </div>
+      <div class="issues"><h4>Issues</h4><ul>
+        <li>On the market about 16 months, with the price cut from $560K to $300K.</li>
+        <li>The listing says the lease expired Feb 1, 2026, with a new lease "available."</li>
+        <li>About 80% of revenue comes from apartment complexes, a customer-concentration risk.</li>
+        <li>A duplicate listing of the same business (BBS 2381071) has been taken down.</li>
+      </ul></div>
+      <div class="links"><a href="https://www.bizbuysell.com/business-opportunity/very-profitable-glass-glazing-business-for-sale/2381517/">BizBuySell</a><a href="https://www.bizquest.com/business-for-sale/very-profitable-glass-glazing-business-for-sale/BW2381517/">BizQuest</a><a href="https://www.businessbroker.net/business-for-sale/very-profitable-glass-glazing-business-sacramento-california/993486.aspx">BusinessBroker.net</a></div>
+    </article>
+
+    <!-- 6 -->
+    <article class="card">
+      <div class="card-h"><div><div class="n">No. 6 · Harris County (Houston), TX</div><h3>Child Day Care Business 2863</h3></div><span class="pill p-red">Price mismatch</span></div>
+      <div class="card-b">
+        <div class="col"><h4>Thread says</h4><dl>
+          <dt>Asking</dt><dd>$325,000</dd><dt>Cash flow</dt><dd>$221,000</dd><dt>Revenue</dt><dd>$636,000</dd><dt>Multiple</dt><dd>1.47x</dd></dl></div>
+        <div class="col"><h4>Source listing</h4><dl>
+          <dt>Broker</dt><dd>Not identified (contact "Admin")</dd><dt>BBS ID</dt><dd class="mono">2487003</dd><dt>Listed</dt><dd>~Mar 26, 2026 (~214 days)</dd><dt>Asking today</dt><dd class="diff">$250,000</dd><dt>Price history</dt><dd>$275K → $250K</dd><dt>BizQuest views</dt><dd>948</dd></dl></div>
+      </div>
+      <div class="issues"><h4>Issues</h4><ul>
+        <li>The source lists the business at $250,000, not $325,000, so the thread's 1.47x multiple uses the wrong price.</li>
+        <li><strong>The lease expires November 1, 2026</strong>, days from now. Rent is $9,630 a month.</li>
+        <li>The listing says the center runs at about 50% capacity.</li>
+      </ul></div>
+      <div class="links"><a href="https://www.bizbuysell.com/business-opportunity/child-day-care-business-established-and-growing-opportunity-2863/2487003/">BizBuySell</a><a href="https://www.bizquest.com/business-for-sale/child-day-care-business-established-and-growing-opportunity-2863/BW2487003/">BizQuest</a></div>
+    </article>
+
+    <!-- 7 -->
+    <article class="card">
+      <div class="card-h"><div><div class="n">No. 7 · Gilmer, East Texas</div><h3>Network Systems &amp; Telephone Business</h3></div><span class="pill p-amb">Price varies by site</span></div>
+      <div class="card-b">
+        <div class="col"><h4>Thread says</h4><dl>
+          <dt>Asking</dt><dd>$445,000</dd><dt>Cash flow</dt><dd>$217,000</dd><dt>Revenue</dt><dd>$552,000</dd><dt>Multiple</dt><dd>2.05x</dd></dl></div>
+        <div class="col"><h4>Source listing</h4><dl>
+          <dt>Broker</dt><dd>Ben Norris, Transworld Business Advisors of East Texas (Tyler)</dd><dt>BBS ID</dt><dd class="mono">2386059</dd><dt>Listed</dt><dd>~July 2, 2025 (~481 days)</dd><dt>Price history</dt><dd>$550K → $495K → $445K</dd><dt>Inventory</dt><dd>$160,000 (included)</dd><dt>BizQuest views</dt><dd>1,288</dd></dl></div>
+      </div>
+      <div class="issues"><h4>Issues</h4><ul>
+        <li>On the market about 16 months with two price cuts. BizQuest still shows $495,000.</li>
+        <li>$160K of the price is inventory. The goodwill multiple is lower than the headline, but so is the business's underlying value.</li>
+      </ul></div>
+      <div class="links"><a href="https://www.bizbuysell.com/business-opportunity/network-systems-and-telephone-business-east-texas/2386059/">BizBuySell</a><a href="https://www.bizquest.com/business-for-sale/network-systems-and-telephone-business-east-texas/BW2386059/">BizQuest</a><a href="https://www.businessbroker.net/business-for-sale/network-systems-and-telephone-business-east-tx-texas/994153.aspx">BusinessBroker.net</a></div>
+    </article>
+
+    <!-- 8 -->
+    <article class="card">
+      <div class="card-h"><div><div class="n">No. 8 · Polk County, FL</div><h3>Commercial Print Shop</h3></div><span class="pill p-amb">Revenue varies by site</span></div>
+      <div class="card-b">
+        <div class="col"><h4>Thread says</h4><dl>
+          <dt>Asking</dt><dd>$450,000</dd><dt>Cash flow</dt><dd>$190,000</dd><dt>Revenue</dt><dd>$602,000</dd><dt>Multiple</dt><dd>2.37x</dd><dt>Listing no.</dt><dd class="mono">BBF-8940-903030</dd><dt>Label</dt><dd>"Listed a week ago"</dd></dl></div>
+        <div class="col"><h4>Source listing</h4><dl>
+          <dt>Broker</dt><dd>Michael Shea, Transworld (ref 3353903030)</dd><dt>BBS ID</dt><dd class="mono">2551320</dd><dt>Listed</dt><dd>~Sept 8, 2026 (~48 days, est.)</dd><dt>Revenue</dt><dd class="diff">$532,785 (BizQuest) · $601,636 (BusinessBroker.net)</dd><dt>Lease</dt><dd>Through Jan 2030</dd><dt>BizQuest views</dt><dd>199</dd></dl></div>
+      </div>
+      <div class="issues"><h4>Issues</h4><ul>
+        <li>The source listings disagree with each other on revenue by about $69K.</li>
+        <li>On the market about seven weeks, not one.</li>
+      </ul></div>
+      <div class="links"><a href="https://www.bizbuysell.com/business-opportunity/successful-printing-business-in-growing-area/2551320/">BizBuySell</a><a href="https://www.bizquest.com/business-for-sale/successful-printing-business-in-growing-area/BW2551320/">BizQuest</a><a href="https://www.businessbroker.net/business-for-sale/printing-shop-polk-county-florida/1016708.aspx">BusinessBroker.net</a></div>
+    </article>
+
+    <!-- 9 -->
+    <article class="card">
+      <div class="card-h"><div><div class="n">No. 9 · Rhode Island</div><h3>Full Service Bakery, "A R.I. Institution"</h3></div><span class="pill p-red">Revenue mismatch</span></div>
+      <div class="card-b">
+        <div class="col"><h4>Thread says</h4><dl>
+          <dt>Asking</dt><dd>$550,000</dd><dt>Cash flow</dt><dd>$114,000</dd><dt>Revenue</dt><dd>$368,000</dd><dt>Multiple</dt><dd>4.81x</dd><dt>Margin</dt><dd>31.1%</dd></dl></div>
+        <div class="col"><h4>Source listing</h4><dl>
+          <dt>Broker</dt><dd>Transworld Business Advisors</dd><dt>BBS ID</dt><dd class="mono">2274715</dd><dt>Listed</dt><dd>~Sept 6, 2024 (~780 days)</dd><dt>Revenue</dt><dd class="diff">$1,137,296 (BizQuest) · $937,774 (BusinessBroker.net)</dd><dt>Employees</dt><dd>11</dd><dt>BizQuest views</dt><dd>3,798</dd></dl></div>
+      </div>
+      <div class="issues"><h4>Issues</h4><ul>
+        <li>Three different revenue figures across sources: $368K, $938K, and $1.14M. The thread uses the lowest.</li>
+        <li>On the market more than two years.</li>
+        <li>DealLedger's most recent read of the Transworld page returned "Withdrawn" in the location field. The listing may no longer be active with the broker.</li>
+      </ul></div>
+      <div class="links"><a href="https://www.bizbuysell.com/business-opportunity/full-service-bakery-a-r-i-institution-real-estate-available/2274715/">BizBuySell</a><a href="https://www.bizquest.com/business-for-sale/full-service-bakery-a-r-i-institution-real-estate-available/BW2274715/">BizQuest</a><a href="https://www.businessbroker.net/business-for-sale/full-service-bakery-a-ri-institution-real-estate-rhode-island/954551.aspx">BusinessBroker.net</a></div>
+    </article>
+
+  </div>
+</section>
+
+<section class="method">
+  <h2>How we did this</h2>
+  <ul>
+    <li><strong>Matching.</strong> Each card's asking price and cash flow were matched against the DealLedger index (broker-direct, BizBuySell, and BizQuest tables), then confirmed by title on BizBuySell, BizQuest, BusinessBroker.net, BizBen, and broker sites.</li>
+    <li><strong>Days on market.</strong> For listings DealLedger has tracked, we use its recorded listing date. For newer listings (Nos. 3, 4, 8), we estimated the date from the BizBuySell listing ID. BBS IDs are assigned sequentially, at roughly 10,000 per three weeks in mid-2026. The print-shop estimate was cross-checked against its BusinessBroker.net ID. Treat estimates as ±2 weeks.</li>
+    <li><strong>Views.</strong> "BizQuest views" are the listing-view counters on each BizQuest page, read Oct 26, 2026. "Thread viewed" is the "buyers viewed this" number printed on each card in the thread.</li>
+    <li><strong>Financials.</strong> All revenue and cash-flow figures are seller-reported and unverified by us, the brokers, or the marketplaces. Where sources disagree, we show each figure.</li>
+  </ul>
+  <div class="note"><strong>Correction note.</strong> An earlier informal read suggested the lawn listing's "BBF-" number wasn't a real listing ID. That was wrong: BBF-prefixed numbers are Business Brokers of Florida MLS IDs, and the listing is live on BizMLS. The listing is real. The thread's revenue figure comes from its 2025 tax return. Its "cash flow" figure is gross profit, not the listing's discretionary earnings.</div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Data current as of October 26, 2026. Listings change; check the broker's page before acting on anything here. Corrections welcome. This page reports what public listing sources show and doesn't make claims about any seller's or broker's intent.
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeToggle'), key='theme';
+  try{var s=localStorage.getItem(key); if(s) root.setAttribute('data-theme',s);}catch(e){}
+  btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    if(!cur){cur=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
+    var next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem(key,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
